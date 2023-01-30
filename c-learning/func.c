@@ -2,17 +2,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-int randnum(int lim) {
-	return 0;
-}
-
 void quadrado (int N) {
-	srand(time(NULL));
 	int i1;
 	int i2;
+	srand(time(NULL));
 	for (i1=0; i1<N; i1++) {
 		for (i2=0; i2<N; i2++) {
-			int random = 1 + rand()/((RAND_MAX + 1u)/9);
+			int random = rand() % 100;
 			printf("%i ", random);
 		}
 		printf("\n");
